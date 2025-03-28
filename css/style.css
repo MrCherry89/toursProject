@@ -1300,6 +1300,11 @@ a:focus {
   .footer .footer-bottom .address-wrap {
     width: 100%;
   }
+}
+.footer .footer-bottom .address-wrap .brends {
+  display: none;
+}
+@media (max-width: 1024px) {
   .footer .footer-bottom .address-wrap .brends {
     display: -webkit-box;
     display: -ms-flexbox;

@@ -830,9 +830,12 @@
     .address-wrap{
       @media(max-width: 1024px){
         width: 100%;
-        .brends{
-          @include flex;
-        }
+       }
+       .brends{
+        display: none;
+        @media(max-width: 1024px){
+            @include flex;
+         }
        }
       p{
         margin-bottom: 16px;
