@@ -111,6 +111,27 @@ a {
   }
 }
 
+.border-white-btn{
+  @include inline-flex;
+  @include align-center;
+  @include justify-center;
+  padding: 12px 28px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  @media(max-width: 767px){
+    font-size: 14px;
+    padding: 10px 24px;
+   }
+  &:hover{
+    background: #334960;
+    color: white;
+    border-color: #334960;
+  }
+}
+
 .white-btn{
   border-radius: 50px;
   @include inline-flex;

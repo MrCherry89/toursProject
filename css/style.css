@@ -130,6 +130,35 @@ a:focus {
   color: white;
 }
 
+.border-white-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  .border-white-btn {
+    font-size: 14px;
+    padding: 10px 24px;
+  }
+}
+.border-white-btn:hover {
+  background: #334960;
+  color: white;
+  border-color: #334960;
+}
+
 .white-btn {
   border-radius: 50px;
   display: -webkit-inline-box;
@@ -1472,6 +1501,158 @@ a:focus {
 .events-calendar .events-calendar-items .events-calendar-item .season button:hover {
   background: white;
   color: #0B0F44;
+}
+
+.banner-slider-wrap {
+  position: relative;
+  z-index: 1;
+}
+.banner-slider-wrap .slider-navigation {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  margin-left: calc((100% - 1720px) / 2);
+  z-index: 100;
+}
+@media (max-width: 1750px) {
+  .banner-slider-wrap .slider-navigation {
+    margin-left: 0;
+    left: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .banner-slider-wrap .slider-navigation {
+    bottom: 50px;
+  }
+}
+.banner-slider-wrap .slider-navigation button {
+  border-color: white;
+}
+.banner-slider-wrap .slider-navigation button svg path {
+  stroke: #fff;
+}
+.banner-slider-wrap .slider-navigation button:hover {
+  background: white;
+}
+.banner-slider-wrap .slider-navigation button:hover svg path {
+  stroke: #0B1B44;
+}
+.banner-slider-wrap .banner-slider {
+  margin-bottom: 0;
+}
+.banner-slider-wrap .banner-slider .item {
+  min-height: 100vh;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 0;
+}
+.banner-slider-wrap .banner-slider .item:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+.banner-slider-wrap .banner-slider .item .bg {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.banner-slider-wrap .banner-slider .item .info {
+  margin: auto;
+  max-width: 1750px;
+  width: 100%;
+  padding: 150px 15px 170px;
+}
+.banner-slider-wrap .banner-slider .item .info h2 {
+  max-width: 490px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 110%;
+  color: white;
+}
+@media (max-width: 1024px) {
+  .banner-slider-wrap .banner-slider .item .info h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .banner-slider-wrap .banner-slider .item .info h2 {
+    font-size: 34px;
+  }
+}
+.banner-slider-wrap .banner-slider .item .info p {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: white;
+}
+@media (max-width: 1024px) {
+  .banner-slider-wrap .banner-slider .item .info p {
+    font-size: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .banner-slider-wrap .banner-slider .item .info p {
+    font-size: 18px;
+  }
+}
+.banner-slider-wrap .banner-slider .item .info .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+}
+@media (max-width: 1024px) {
+  .banner-slider-wrap .banner-slider .item .info .buttons {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .banner-slider-wrap .banner-slider .item .info .buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 5px;
+  }
+}
+.banner-slider-wrap .banner-slider .item .info .buttons a {
+  padding: 16px 48px;
+}
+@media (max-width: 1024px) {
+  .banner-slider-wrap .banner-slider .item .info .buttons a {
+    padding: 12px 38px;
+  }
+}
+@media (max-width: 767px) {
+  .banner-slider-wrap .banner-slider .item .info .buttons a {
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+.banner-slider-wrap .banner-slider .item .info .buttons a.white-btn {
+  margin-right: 20px;
+}
+@media (max-width: 767px) {
+  .banner-slider-wrap .banner-slider .item .info .buttons a.white-btn {
+    margin-right: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -970,3 +970,130 @@
    }
 }
 
+.banner-slider-wrap{
+  position: relative;
+  z-index: 1;
+  .slider-navigation{
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    margin-left: calc((100% - 1720px) / 2);
+    z-index: 100;
+    @media(max-width: 1750px){
+      margin-left: 0;
+      left: 15px;
+     }
+     @media(max-width: 767px){
+      bottom: 50px;
+     }
+    button{
+      border-color: white;
+      svg{
+        path{
+          stroke: #fff;
+        }
+      }
+      &:hover{
+        background: white;
+        svg{
+          path{
+            stroke: #0B1B44;
+          }
+        }
+      }
+    }
+  }
+  .banner-slider{
+    margin-bottom: 0;
+    .item{
+      min-height: 100vh;
+      overflow-y: auto;
+      @include flex;
+      position: relative;
+      z-index: 0;
+      &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(black, .3);
+        z-index: -1;
+      }
+      .bg{
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+      }
+      .info{
+        margin: auto;
+        max-width: 1750px;
+        width: 100%;
+        padding: 150px 15px 170px;
+        h2{
+          max-width: 490px;
+          margin-bottom: 20px;
+          width: 100%;
+          font-size: 54px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 110%;
+          color: white;
+          @media(max-width: 1024px){
+            font-size: 40px;
+           }
+           @media(max-width: 767px){
+           font-size: 34px;
+           }
+        }
+        p{
+          font-size: 26px;
+          font-weight: 600;
+          margin-bottom: 20px;
+          color: white;
+          @media(max-width: 1024px){
+            font-size: 22px;
+           }
+           @media(max-width: 767px){
+            font-size: 18px;
+           }
+        }
+        .buttons{
+          @include flex;
+          margin-top: 40px;
+          @media(max-width: 1024px){
+            margin-top: 30px;
+           }
+           @media(max-width: 767px){
+            @include dir-col;
+            margin-top: 5px;
+           }
+          a{
+            padding: 16px 48px;
+            @media(max-width: 1024px){
+              padding: 12px 38px;
+             }
+             @media(max-width: 767px){
+              margin-top: 15px;
+              width: 100%;
+             }
+            &.white-btn{
+              margin-right: 20px;
+              @media(max-width: 767px){
+                margin-right: 0;
+               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

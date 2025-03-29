@@ -24,4 +24,16 @@ $(document).ready(function () {
             },
           ]
       });
+
+      $(".banner-slider").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        prevArrow: $(".banner-slider-wrap .slider-navigation .slick-prev"),
+        nextArrow: $(".banner-slider-wrap .slider-navigation .slick-next"),
+        fade: true, // Добавляет эффект плавного появления и исчезновения
+        speed: 800, // Задает скорость смены слайдов (в миллисекундах)
+        cssEase: "ease-in-out" // Дает более плавную анимацию
+    });
 });
