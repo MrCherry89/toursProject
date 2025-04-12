@@ -311,5 +311,50 @@ input.error, textarea.error{
   }
 }
 
+.drop-menu {
+  @include dir-col;
+  @include justify-center;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  @include align-center;
+  display: none;
+  background: white;
+  @media(max-width: 1024px) {
+      @include flex;
+  }
+
+  .line {
+      width: 20px;
+      height: 2px;
+      background-color: #334960;
+      display: block;
+      margin: 1.5px auto;
+      -webkit-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+
+  }
+}
+
+.drop-menu.is-active .line:nth-child(3) {
+  opacity: 0;
+}
+
+
+.drop-menu.is-active .line:nth-child(1) {
+  -webkit-transform: translateY(6px) rotate(45deg);
+  -ms-transform: translateY(6px) rotate(45deg);
+  -o-transform: translateY(6px) rotate(45deg);
+  transform: translateY(6px) rotate(45deg);
+}
+
+.drop-menu.is-active .line:nth-child(2) {
+  -webkit-transform: translateY(1px) rotate(-45deg);
+  -ms-transform: translateY(1px) rotate(-45deg);
+  -o-transform: translateY(1px) rotate(-45deg);
+  transform: translateY(1px) rotate(-45deg);
+}
 
 

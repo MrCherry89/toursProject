@@ -84,12 +84,25 @@ $(document).ready(function () {
       $(".search-form-wrap").addClass("show");
     })
 
+    $(".drop-mob-item").on("click", function(){
+      $(this).closest("li").find(".sub-menu-mob").toggleClass("open");
+      $(this).find("img").toggleClass("rotate");
+    })
+
     $(".tag-item").on("click", function(){
       $(this).toggleClass("active");
     })
 
     $(".search-form .close-form").on("click", function(){
       $(".search-form-wrap").removeClass("show");
+    })
+
+    $(".drop-wrap-mobile .top").on("click", function(){
+      $(".hide-drop-menu").addClass("show");
+    })
+
+    $(".hide-drop-menu .close-mob").on("click", function(){
+      $(".hide-drop-menu").removeClass("show");
     })
 
     $(document).on("click", function() {
@@ -106,4 +119,12 @@ $(document).ready(function () {
     $(".drop-wrap").on("click", function(e) {
       e.stopPropagation(); // если кликнули внутри drop-wrap, тоже не закрываем
     });
+
+    $(".drop-menu").click(function () {
+      $(this).toggleClass("is-active");
+      $(".mobile-menu-wrap").toggleClass("open");
+      $(".header").toggleClass("no-radius");
+      $(".hide-drop-menu").removeClass("show");
+      $("body, html").toggleClass("overflow");
+  });
 });
