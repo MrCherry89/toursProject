@@ -127,4 +127,40 @@ $(document).ready(function () {
       $(".hide-drop-menu").removeClass("show");
       $("body, html").toggleClass("overflow");
   });
+
+  var slickInitialized = false;
+
+function initSlickIfMobile() {
+  if (window.innerWidth < 768) {
+    if (!slickInitialized) {
+      $('.our-team-slider').slick({
+        slidesToShow: 1,
+        arrows: false,
+        dots: false,
+        variableWidth: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        speed: 1000,
+        infinite: false,
+      });
+      slickInitialized = true;
+    }
+  } else {
+    if (slickInitialized) {
+      $('.our-team-slider').slick('unslick');
+      slickInitialized = false;
+    }
+  }
+}
+
+// при загрузке страницы
+$(document).ready(function () {
+  initSlickIfMobile();
+});
+
+// при ресайзе окна
+$(window).on('resize', function () {
+  initSlickIfMobile();
+});
+
 });
