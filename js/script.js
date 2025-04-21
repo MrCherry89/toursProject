@@ -25,6 +25,32 @@ $(document).ready(function () {
           ]
       });
 
+    $(".our-history-slider").slick({
+      slidesToShow: 1,
+      variableWidth: true,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        prevArrow: $(".our-history .top .slider-navigation .slick-prev"),
+        nextArrow: $(".our-history .top .slider-navigation .slick-next"),
+        responsive: [
+            {
+              breakpoint: 1025,
+              settings: {
+                slidesToShow: 3,
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+
+                autoplay: true,
+                speed: 800,
+              }
+            },
+          ]
+      });
+
       $(".tour-slider").slick({
         slidesToShow: 3,
         slidesToScroll: 1,
