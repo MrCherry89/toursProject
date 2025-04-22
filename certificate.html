@@ -14,7 +14,7 @@
 
   <body>
 
-    <header class="header">
+    <header class="header blue-style">
       <div class="wrapper">
         <div class="header-top-line">
           <div class="drop-wrap">
@@ -301,335 +301,53 @@
       </div>
     </header>
 
-    <div class="banner-slider-wrap">
-      <div class="slider-navigation">
-        <button type="button" class="slick-prev slick-arrow">
-          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.53909 6.65573L6.51597 11.6326L6.74219 11.8588M1.53909 6.65573L6.74219 1.45264M1.53909 6.65573H11.9453" 
-            stroke-width="1.37107" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
-        <button type="button" class="slick-next slick-arrow">
-          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.53909 6.65573L6.51597 11.6326L6.74219 11.8588M1.53909 6.65573L6.74219 1.45264M1.53909 6.65573H11.9453" 
-            stroke-width="1.37107" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
-      </div>
-      <div class="banner-slider">
-        <div class="item">
-          <div class="bg" style="background-image: url(img/banner-img.jpg)"></div>
-          <div class="info">
-            <h2>Путешествие <br>
-              в страну дракона</h2>
-              <p>Тур всего с одной пересадкой!</p>
-              <div class="buttons">
-                <a href="#" class="white-btn">Выбрать тур</a>
-                <a href="#" class="border-white-btn">Узнать больше</a>
-              </div>
-          </div>
+    <div class="certificate">
+        <div class="wrapper">
+            <div class="certificate-info">
+                <h2>Оплата сертификата
+                    через СБП
+                </h2>
+                <div class="img-wrap">
+                    <img src="img/certificate-img.png" alt="">
+                </div>    
+            </div>
         </div>
-        <div class="item">
-          <div class="bg" style="background-image: url(img/banner-img.jpg)"></div>
-          <div class="info">
-            <h2>Путешествие 
-              в страну дракона 2</h2>
-              <p>Тур всего с одной пересадкой! 2</p>
-              <div class="buttons">
-                <a href="#" class="white-btn">Выбрать тур</a>
-                <a href="#" class="border-white-btn">Узнать больше</a>
-              </div>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <div class="popular-destinations">
-      <div class="wrapper">
-        <h2 class="main-title">Популярные направления</h2>
-        <div class="popular-destinations-items">
-          <a href="#" class="popular-destinations-item" 
-          style="background-image: url(img/popular-destinations-img1.png)">
-              <span>Экзотические направления</span>
-          </a>
-          <a href="#" class="popular-destinations-item" 
-          style="background-image: url(img/popular-destinations-img2.png)">
-              <span>Туры в Турцию</span>
-          </a>
-          <a href="#" class="popular-destinations-item" 
-          style="background-image: url(img/popular-destinations-img3.png)">
-              <span>Сафари туры</span>
-          </a>
-          <a href="#" class="popular-destinations-item" 
-          style="background-image: url(img/popular-destinations-img4.png)">
-              <span>Отдых в Европе</span>
-          </a>
-          <a href="#" class="popular-destinations-item" 
-          style="background-image: url(img/popular-destinations-img5.png)">
-              <span>Туры по России</span>
-          </a>
-          <a href="#" class="popular-destinations-item" 
-          style="background-image: url(img/popular-destinations-img6.png)">
-              <span>Морские <br>
-                и речные круизы</span>
-          </a>
+    <div class="certificate-form-wrap">
+        <div class="wrapper">
+            <form class="certificate-form">
+                <div class="inputs-wrap">
+                    <input type="text" placeholder="Фамилия" required name="famile">
+                    <input type="text" placeholder="Имя" required name="name">
+                    <input type="text" placeholder="Отчество" required name="name2">
+                    <input type="tel" name="phone" class="phone-number-input" placeholder="Телефон" required>
+                    <input type="email" placeholder="E-mail" required name="email2">
+                    <input type="text" placeholder="Сумма" required name="summ">
+                </div>
+                <p>*Сумма в поле указывается в рублях, копейки через точку</p>
+                <div class="recipient-details">
+                    <h3>Данные о получателе</h3>
+                    <div class="inputs">
+                        <input class="input1" type="text" placeholder="Имя получателя" required name="name3">
+                        <input class="input2" type="email" placeholder="E-mail получателя" required name="email">
+                        <textarea placeholder="Сообщение получателю" name="textarea" required></textarea>
+                        <input class="input3" type="date" placeholder="Дата доставки" required name="date">
+                        <input class="input4" type="text" placeholder="Время доставки" required name="time">
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <button class="blue-btn" type="submit">Отправить</button>
+                <div class="checkbox-wrap">
+                    <label>
+                      <input type="checkbox" checked/>
+                      <span></span>
+                      <p>Нажимая кнопку вы соглашаетесь с <a href="#">политикой обработки персональных данных</a></p>
+                    </label>
+                  </div>
+                </div>
+            </form>
         </div>
-      </div>
-    </div>
-
-    <div class="why">
-      <div class="wrapper">
-        <h2 class="main-title">Почему Солеанс Тревел</h2>
-        <div class="why-items">
-          <div class="why-item">
-            <span class="icon">
-              <img src="img/why-icon1.svg" alt="">
-            </span>
-            <div class="texts">
-              <b>Одни из первых</b>
-              <p>«Солеанс Тревел» – одна из первых туристических 
-                компаний в Санкт-Петербурге: более 30 лет успешной
-                 работы по организации путешествий</p>
-            </div>
-          </div>
-          <div class="why-item">
-            <span class="icon">
-              <img src="img/why-icon2.svg" alt="">
-            </span>
-            <div class="texts">
-              <b>Огромный выбор</b>
-              <p>В нашем арсенале более 130 направлений отдыха, около 3500 
-                небанальных маршрутов и опыт в разработке сотни 
-                уникальных путешествий</p>
-            </div>
-          </div>
-          <div class="why-item">
-            <span class="icon">
-              <img src="img/why-icon3.svg" alt="">
-            </span>
-            <div class="texts">
-              <b>Команда экспертов-путешественников</b>
-              <p>Ваш отдых в руках профессиональной команды экспертов, ежегодно
-                 пополняющих свою личную коллекцию путешествий</p>
-            </div>
-          </div>
-          <div class="why-item">
-            <span class="icon">
-              <img src="img/why-icon4.svg" alt="">
-            </span>
-            <div class="texts">
-              <b>Работаем на результат</b>
-              <p>Подбор идеального путешествия – от идеи до 
-                обратного трансфера до вашего дома</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="special-offers">
-      <div class="wrapper">
-        <div class="top">
-          <h2 class="main-title">Наши спецпредложения</h2>
-          <a href="#" class="border-btn">Смотреть все предложения (20)</a>
-        </div>
-        <div class="special-offers-items">
-          <div class="special-offers-item">
-            <a href="#" class="img">
-              <img src="img/special-offers-img1.png" alt="">
-            </a>
-            <div class="texts">
-              <div class="top-info">
-                <a href="#">Taj Exotica Resort & <br> Spa 5* Мальдивы</a>
-                <span>-50%</span>
-              </div>
-              <p>
-                50% скидка* при проживании по 31.03.2025
-                Дополнительная скидка 22% при проживании от 5 ночей
-                Бесплатный трансфер на скоростном катере (20 минут)
-                Повышение категории питания BB+HB 
-              </p>
-              <div class="bottom">
-                <span>*При бронировании до 31.10.2024</span>
-                <a href="#" class="link">
-                  <img src="img/link-arrow.svg" alt="">
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="special-offers-item">
-            <a href="#" class="img">
-              <img src="img/special-offers-img2.png" alt="">
-            </a>
-            <div class="texts">
-              <div class="top-info">
-                <a href="#">The Westin Turtle Bay Resort & Spa 5* Маврикий</a>
-                <span>-10%</span>
-              </div>
-              <p>
-                10% скидка на проживание с 25.08.2024 по 30.09.2024
-Проживание 2 детей в одной комнате с родителями бесплатно в соответствии с забронированным планом питания
-
-
-              </p>
-              <div class="bottom">
-                <a href="#" class="link">
-                  <img src="img/link-arrow.svg" alt="">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-wrap">
-          <p>Не пропустите выгодные предложения, подпишитесь на рассылку</p>
-          <form class="special-offers-form">
-            <input type="email" placeholder="E-MAIL">
-            <button type="button">Подписаться</button>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <div class="travel-ideas">
-      <div class="wrapper">
-        <div class="top">
-          <h2 class="main-title">Идеи путешествий</h2>
-          <div class="slider-navigation">
-            <button type="button" class="slick-prev slick-arrow">
-              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.53909 6.65573L6.51597 11.6326L6.74219 11.8588M1.53909 6.65573L6.74219 1.45264M1.53909 6.65573H11.9453" 
-                stroke-width="1.37107" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-            <button type="button" class="slick-next slick-arrow">
-              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.53909 6.65573L6.51597 11.6326L6.74219 11.8588M1.53909 6.65573L6.74219 1.45264M1.53909 6.65573H11.9453" 
-                stroke-width="1.37107" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-          </div>
-        </div>
-        <div class="travel-slider">
-          <a href="#" class="item">
-            <span class="icon">
-              <img src="img/link-arrow-blue.svg" alt="">
-            </span>
-            <span class="bg" style="background-image: url(img/travel-img1.png)"></span>
-            <span class="text">Отдых <br>
-              на курортах</span>
-          </a>
-          <a href="#" class="item">
-            <span class="icon">
-              <img src="img/link-arrow-blue.svg" alt="">
-            </span>
-            <span class="bg" style="background-image: url(img/travel-img2.png)"></span>
-            <span class="text">Экскурсионные
-              туры</span>
-          </a>
-          <a href="#" class="item">
-            <span class="icon">
-              <img src="img/link-arrow-blue.svg" alt="">
-            </span>
-            <span class="bg" style="background-image: url(img/travel-img3.png)"></span>
-            <span class="text">Свадьба <br>
-              и романтика</span>
-          </a>
-          <a href="#" class="item">
-            <span class="icon">
-              <img src="img/link-arrow-blue.svg" alt="">
-            </span>
-            <span class="bg" style="background-image: url(img/travel-img4.png)"></span>
-            <span class="text">Туры <br>
-              по интересам</span>
-          </a>
-          <a href="#" class="item">
-            <span class="icon">
-              <img src="img/link-arrow-blue.svg" alt="">
-            </span>
-            <span class="bg" style="background-image: url(img/travel-img1.png)"></span>
-            <span class="text">Отдых <br>
-              на курортах</span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="certificate-gift">
-      <div class="wrapper">
-        <div class="info">
-          <div class="texts">
-            <h2>Сертификат в подарок</h2>
-          <p>Это универсальный подарок для всех. 
-            Подарок на любой случай: Новый год,
-             День рождения, свадьба  и другие значимые события.
-            </p>
-            <a href="#" class="white-btn">Заказать сертификат</a>
-          </div>
-          <div class="img-wrap">
-            <img src="img/gift-style-img.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="events-calendar">
-      <div class="wrapper">
-        <h2 class="main-title">Событийный календарь</h2>
-        <div class="events-calendar-items">
-          <div class="events-calendar-item">
-            <span class="icon">
-              <img src="img/events-icon1.svg" alt="">
-            </span>
-            <span class="bg" style="background-image: url(img/events-calendar-img1.png)">
-            </span>
-            <div class="season">
-              <h4>Зима</h4>
-              <button type="button">Декабрь</button>
-              <button type="button">Январь</button>
-              <button type="button">Февраль</button>
-            </div>
-          </div>
-          <div class="events-calendar-item">
-            <span class="icon">
-              <img src="img/events-icon2.svg" alt="">
-            </span>
-            <span class="bg" style="background-image: url(img/events-calendar-img2.png)">
-            </span>
-            <div class="season">
-              <h4>Весна</h4>
-              <button type="button">Март</button>
-              <button type="button">Апрель</button>
-              <button type="button">Май</button>
-            </div>
-          </div>
-          <div class="events-calendar-item">
-            <span class="icon">
-              <img src="img/events-icon3.svg" alt="">
-            </span>
-            <span class="bg" style="background-image: url(img/events-calendar-img3.png)">
-            </span>
-            <div class="season">
-              <h4>Лето</h4>
-              <button type="button">Июнь</button>
-              <button type="button">Июль</button>
-              <button type="button">Август</button>
-            </div>
-          </div>
-          <div class="events-calendar-item">
-            <span class="icon">
-              <img src="img/events-icon4.svg" alt="">
-            </span>
-            <span class="bg" style="background-image: url(img/events-calendar-img4.png)">
-            </span>
-            <div class="season">
-              <h4>Осень</h4>
-              <button type="button">Сентябрь</button>
-              <button type="button">Октябрь</button>
-              <button type="button">Ноябрь</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <footer class="footer">

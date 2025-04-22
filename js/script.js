@@ -97,6 +97,14 @@ $(document).ready(function () {
         errorPlacement: function (error, element) {}
     });
 
+    $(".certificate-form").validate({
+      errorPlacement: function (error, element) {}
+  });
+
+    $(".payment-form").validate({
+      errorPlacement: function (error, element) {}
+  });
+
     window.addEventListener("scroll", function () {
       const header = document.querySelector("header");
       if (window.scrollY > 1) {
@@ -187,6 +195,63 @@ $(document).ready(function () {
 // при ресайзе окна
 $(window).on('resize', function () {
   initSlickIfMobile();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const regions = document.querySelectorAll('[data-region]');
+
+  // Только на мобильных
+  if (window.innerWidth <= 768) {
+    regions.forEach(region => {
+      const btn = region.querySelector('.region-header');
+      btn.addEventListener('click', () => {
+        region.classList.toggle('open');
+      });
+    });
+  }
+});
+
+$(".region-item .top").on("click", function() {
+  $(this).closest(".region-item").find(".bottom").toggleClass("open");
+  $(this).find(".icon").toggleClass("rotate");
+});
+
+$('.popup-gallery').magnificPopup({
+  delegate: 'a',
+  type: 'image',
+  tLoading: 'Loading image #%curr%...',
+  mainClass: 'mfp-img-mobile',
+  gallery: {
+    enabled: true,
+    navigateByImgClick: true,
+    preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+  },
+  image: {
+    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+    titleSrc: function(item) {
+      return item.el.attr('title') + ' by Marsel Van Oosten';
+    }
+  }
+});
+
+const buttons = document.querySelectorAll('.tab-buttons button');
+const panels = document.querySelectorAll('.tab-panel');
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Активная кнопка
+    buttons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    // Показ панели
+    const target = btn.dataset.tab;
+    panels.forEach(panel => {
+      panel.classList.remove('active');
+      if (panel.id === target) {
+        panel.classList.add('active');
+      }
+    });
+  });
 });
 
 });
