@@ -254,4 +254,36 @@ buttons.forEach(btn => {
   });
 });
 
+$('.select-wrap select').select2({
+  minimumResultsForSearch: -1,
+});
+
+$(".questions__item").first().addClass("opened active");
+$(".questions__item")
+  .first()
+  .find(".questions__item-body")
+  .addClass("active")
+  .slideDown();
+$(".questions__item").first().find(".icon").addClass("rotate");
+
+$(".questions__item .questions__item-heading").on("click", function (e) {
+  e.preventDefault();
+
+  // Проверяем, открыт ли уже этот вопрос
+  const currentItem = $(this).closest(".questions__item");
+  const isAlreadyOpen = currentItem.hasClass("opened");
+
+  // Закрываем все вопросы
+  $(".questions__item").removeClass("opened active");
+  $(".questions__item-body").removeClass("active").slideUp();
+  $(".questions__item .icon").removeClass("rotate");
+
+  // Если текущий вопрос не был открыт, открываем его
+  if (!isAlreadyOpen) {
+    currentItem.addClass("opened active");
+    currentItem.find(".questions__item-body").addClass("active").slideDown();
+    $(this).find(".icon").addClass("rotate");
+  }
+});
+
 });
