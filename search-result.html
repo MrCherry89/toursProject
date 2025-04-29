@@ -9,13 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/slick-theme.css" />
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/select2.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
 
-    <header class="header">
+    <header class="header blue-style">
       <div class="wrapper">
         <div class="header-top-line">
           <div class="drop-wrap">
@@ -302,281 +303,306 @@
       </div>
     </header>
 
-    <div class="main-banner" style="background-image: url(img/ship-page-bg.jpg)">
+    <div class="search-result-wrap">
         <div class="wrapper">
-            <h1>Теплоход «Максим Горький»</h1>
-        </div>
-    </div>
-
-    <div class="gallery-wrap">
-        <div class="wrapper">
-            <h2 class="main-title2">Галерея</h2>
-            <div class="items popup-gallery">
-                <div class="big">
-                    <a href="img/cabins-img1.png">
-                        <img src="img/cabins-img1.png" alt="">
-                    </a>
-                </div>
-                <div class="small">
-                    <a href="img/cabins-img2.png">
-                        <img src="img/cabins-img2.png" alt="">
-                    </a>
-                    <a href="img/cabins-img3.png" class="shadow">
-                        <img src="img/cabins-img3.png" alt="">
-                        <span class="style">+23 фото</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="desc-ship">
-        <div class="wrapper">
-            <h2 class="main-title2">Описание теплохода</h2>
-            <div class="desc-ship-info">
-                <div class="left">
-                    <h4>Технические характеристики</h4>
-                    <ul>
-                        <li>
-                            <span class="grey">Уровень </span>
-                            <span class="dots"></span>
-                            <span class="blue">5*</span>
-                        </li>
-                        <li>
-                            <span class="grey">Скорость</span>
-                            <span class="dots"></span>
-                            <span class="blue">22 км/ч</span>
-                        </li>
-                        <li>
-                            <span class="grey">Длина</span>
-                            <span class="dots"></span>
-                            <span class="blue">110 м</span>
-                        </li>
-                        <li>
-                            <span class="grey">Ширина</span>
-                            <span class="dots"></span>
-                            <span class="blue">14,5 м</span>
-                        </li>
-                        <li>
-                            <span class="grey">Осадка</span>
-                            <span class="dots"></span>
-                            <span class="blue">2,3 м</span>
-                        </li>
-                        <li>
-                            <span class="grey">Количество мест</span>
-                            <span class="dots"></span>
-                            <span class="blue">114</span>
-                        </li>
-                        <li>
-                            <span class="grey">Реновация</span>
-                            <span class="dots"></span>
-                            <span class="blue">весна 2020</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="right">
-                    <div class="tabs">
-                        <div class="tab-buttons">
-                          <button class="active" data-tab="tab1">Описание</button>
-                          <button data-tab="tab2">На борту</button>
-                          <button data-tab="tab3">Особенности</button>
+            <h2 class="main-title2">Результаты поиска по запросу «Италия»</h2>
+            <div class="info">
+                <div class="filter-wrap">
+                  <div class="filter-top">
+                    <h5>Фильтр</h5>
+                    <div class="reset">
+                      <span class="text">Сброс</span>
+                      <span class="icon">
+                        <img src="img/small-close.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="close">
+                      <img src="img/close-filter.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="fil-info">
+                    <div class="select-info">
+                      <b>Направление:</b>
+                      <div class="select-wrap">
+                          <select>
+                              <option value="1">Италия</option>
+                              <option value="2">Испания</option>
+                              <option value="2">Англия</option>
+                          </select>
+                      </div>
+                    </div>
+                    <div class="select-info">
+                      <b>Регион:</b>
+                      <div class="select-wrap">
+                          <select>
+                              <option value="1">Сицилия</option>
+                              <option value="2">Милан</option>
+                              <option value="2">Торино</option>
+                          </select>
+                      </div>
+                    </div>
+                    <div class="selects-wrap">
+                      <b>Дата путешествия:</b>
+                      <div class="selects">
+                        <div class="select-wrap">
+                          <select>
+                              <option value="1">Выберите дату</option>
+                          </select>
+                      </div>
+                      <div class="select-wrap">
+                        <select>
+                            <option value="1">± 0 дней</option>
+                            <option value="1">1 день</option>
+                            <option value="1">2 дня</option>
+                        </select>
+                    </div>
+                      </div>
+                    </div>
+                    <div class="duration-slider-container">
+                      <b>Продолжительность:</b>
+                      <div class="inputs">
+                        <div class="input-box">
+                          <label for="duration-from">От</label>
+                          <input type="text" id="duration-from" readonly>
                         </div>
-                      
-                        <div class="tab-content">
-                          <div class="tab-panel active" id="tab1">
-                            <h4>Описание</h4>
-                            <div class="texts">
-                                <p>Теплоход уровня 5*, ориентированный на иностранные группы!</p>
-                                <p>Крайне редко у наших соотечественников появляется возможность 
-                                    совершить круиз по рекам России класса Премиум / Люкс
-                                     в сопровождении русскоговорящего персонала!</p>
-                                <p>Обслуживание и экскурсионная программа (входит в стоимость
-                                     круиза) на 5 иностранных языках (английский, немецкий,
-                                      французский, итальянский и испанский), а также на 
-                                      русском языке.</p>
-                            </div>
-                          </div>
-                          <div class="tab-panel" id="tab2">
-                            <h4>На борту</h4>
-                            <div class="texts">
-                                <ul class="list">
-                                    <li>- Ресторан</li>
-                                    <li>- Бар-ресторан</li>
-                                    <li>- Музыкальный салон-бар</li>
-                                    <li>- Конференц-зал / кинотеатр</li>
-                                    <li>- Сувенирный магазин</li>
-                                    <li>- СПА-салон</li>
-                                    <li>- Медицинский пункт</li>
-                                    <li>- Wi-Fi</li>
-                                </ul>
-                            </div>
-                          </div>
-                          <div class="tab-panel" id="tab3">
-                            <h4>Особенности</h4>
-                            <div class="texts">
-                                <ul class="list">
-                                    <li>- Просторные уютные каюты и комфортные общественные пространства</li>
-                                    <li>- Завтрак / обед - "шведский стол"</li>
-                                    <li>- Ужин по меню (предварительный заказ), с включенными
-                                         напитками (вода, чай, кофе, на выбор: сок, вино красное 
-                                         / белое, пиво)</li>
-                                    <li>- Кофе станция круглосуточно (с горячими напитками и свежей выпечкой)</li>
-                                    <li>- Приветственный коктейль</li>
-                                    <li>- Уникальные экскурсионные программы</li>
-                                    <li>- Профессиональные гиды</li>
-                                    <li>- Прощальный капитанский ужин с коктейлем</li>
-                                    <li>- Русская чайная церемония</li>
-                                    <li>- Тематические ужины</li>
-                                    <li>- Концерты живой классической
-                                        и танцевальной музыки</li>
-                                    <li>- Во всех каютах: халаты и тапочки, туалетные
-                                         принадлежности, сейф, зонты, мини-бар (за дополнительную
-                                          плату), ТВ, холодильник, фен</li>
-                                </ul>
-                            </div>
-                          </div>
+                        <div class="input-box">
+                          <label for="duration-to">До</label>
+                          <input type="text" id="duration-to" readonly>
                         </div>
                       </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="description-cabins">
-        <div class="wrapper">
-            <h2 class="main-title2">Описание кают</h2>
-            <div class="cabins-item">
-                <div class="img-wrap">
-                    <img src="img/cabins-img1.png" alt="">
-                </div>
-                <div class="texts">
-                    <h4>Одноместная каюта</h4>
-                    <p>Площадь: 9м2</p>
-                    <p>В каюте: односпальная кровать, шкаф для одежды, радио,
-                         кондиционер, телевизор, холодильник, фен, сейф, душ, 
-                         санузел, обзорное окно, электророзетка на 220V.</p>
-                    <p>Каюты №219,220,227,228.</p>
-                    <p>Каюты №207,208 — увеличенной площади, до 13,9м2. <br>
-                        Продаются по увеличенной стоимости.</p>
-                </div>
-            </div>
-            <div class="cabins-item">
-                <div class="img-wrap">
-                    <img src="img/cabins-img2.png" alt="">
-                </div>
-                <div class="texts">
-                    <h4>Делюкс двухместный</h4>
-                    <p>Однокомнатная каюта предназначена для размещения не более 2-х человек.
-                    <br> Возможно одноместное размещение с доплатой.</p>
-                    <p>В каюте: две односпальные кровати или двуспальная кровать, шкаф для одежды,
-                         холодильник, телевизор, фен, сейф, радио, два окна, электророзетка на 220V, 
-                         душ, санузел, кондиционер.</p>
-                    <p>В каютах №103-118 — две односпальные кровати (можно сдвинуть), площадь каюты 17,7м2.</p>
-                    <p>В каютах №205, 206, 217, 218, 221, 222, 223, 224, 225, 226 — две односпальные
-                         кровати (можно сдвинуть), площадь каюты от 16,7 до 17,7 м2.</p>
-                    <p>В каютах №301, 302 — двуспальная кровать, площадь каюты до 18,9 м2.</p>
-                    <p>В каютах №303, 304 — двуспальная кровать, площадь каюты 12,5 м2. 
-                        Продаются по пониженной стоимости.</p>
-                </div>
-            </div>
-            <div class="cabins-item">
-                <div class="img-wrap">
-                    <img src="img/cabins-img3.png" alt="">
-                </div>
-                <div class="texts">
-                    <h4>Делюкс трёхместный</h4>
-                    <p>Однокомнатная каюта предназначена для размещения 2-х или 3-х человек.
-                         В случае размещения 3-х человек, 3-е место оплачивается по пониженному
-                          тарифу, размещение на доп. месте (диване).</p>
-                    <p>Площадь: 17,7м2</p>
-                    <p>В каюте: две односпальные кровати (можно сдвинуть), диван, шкаф
-                         для одежды, холодильник, телевизор, фен, радио, сейф, два окна,
-                          электророзетка на 220, душ, санузел, кондиционер.</p>
-                    <p>В каютах №303, 304 — двуспальная кровать, площадь каюты 12,5 м2.
-                         Продаются по пониженной стоимости.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="tour-slider-wrap">
-      <div class="wrapper">
-        <div class="top">
-          <h2 class="main-title2">Круизы, проходящие на этом судне</h2>
-          <div class="slider-navigation">
-            <button type="button" class="slick-prev slick-arrow">
-              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.53909 6.65573L6.51597 11.6326L6.74219 11.8588M1.53909 6.65573L6.74219 1.45264M1.53909 6.65573H11.9453" 
-                stroke-width="1.37107" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-            <button type="button" class="slick-next slick-arrow">
-              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.53909 6.65573L6.51597 11.6326L6.74219 11.8588M1.53909 6.65573L6.74219 1.45264M1.53909 6.65573H11.9453" 
-                stroke-width="1.37107" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-          </div>
-        </div>
-        <div class="tour-slider tour-slider2">
-          <div class="item">
-            <div class="tour-item">
-              <div class="img" style="background-image: url(img/tour-slider-img7.png)"></div>
-              <div class="texts">
-                <a href="#" class="name">Вкус Сибири</a>
-                  <span class="city">С 15.05.2025 до 18.05.2025</span>
-                  <div class="price">
-                    <span class="text">20 дней /19 ночей</span>
-                    <b>от 477 765 ₽</b>
+                      <div id="duration-slider"></div>
+                    </div>
+                    <div class="select-info">
+                      <b>Вид отдыха:</b>
+                      <div class="select-wrap">
+                          <select>
+                              <option value="1">Отдых на курортах</option>
+                              <option value="2">Отдых на курортах 2</option>
+                          </select>
+                      </div>
+                    </div>
+                    <div class="select-info">
+                      <b>События:</b>
+                      <div class="select-wrap">
+                          <select>
+                              <option value="1">Северное сияние</option>
+                              <option value="2">Северное сияние 2</option>
+                          </select>
+                      </div>
+                    </div>
+                    <div class="select-info">
+                      <b>Виза:</b>
+                      <div class="select-wrap">
+                          <select>
+                              <option value="1">Нужна</option>
+                              <option value="2">Не нужна</option>
+                          </select>
+                      </div>
+                    </div>
+                    <div class="select-info">
+                      <b>Группа:</b>
+                      <div class="select-wrap">
+                          <select>
+                              <option value="1">Русская</option>
+                              <option value="2">Китайская</option>
+                              <option value="2">Армянская</option>
+                          </select>
+                      </div>
+                    </div>
+                    <div class="tags">
+                      <b>Теги:</b>
+                      <span class="tag">Без визы</span>
+                      <span class="tag">Экзотика</span>
+                      <span class="tag ">Без визы</span>
+                      <span class="tag active">Для семей</span>
+                      <span class="tag">Для семей</span>
+                    </div>
+                    <div class="checkbox-wrap">
+                      <label>
+                        <input type="checkbox" checked/>
+                        <span></span>
+                        <p>Показывать только Избранное</p>
+                      </label>
+                    </div>
                   </div>
-                  <a href="#" class="more">Подробнее</a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="tour-item">
-              <div class="img" style="background-image: url(img/tour-slider-img8.png)"></div>
-              <div class="texts">
-                <a href="#" class="name">Енисейская экспедиция <br> (с плато Путорана)</a>
-                  <span class="city">С 13.07.2025 до 12.07.2025</span>
-                <div class="price">
-                  <span class="text">5 дней / 4 ночей</span>
-                  <b>Цены на заказ</b>
-                </div>
-                <a href="#" class="more">Подробнее</a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="tour-item">
-              <div class="img" style="background-image: url(img/tour-slider-img9.png)"></div>
-              <div class="texts">
-                <a href="#" class="name">По следам старообрядцев</a>
-                  <span class="city">С 15.05.2025 до 18.05.2025</span>
-                <div class="price">
-                  <span class="text"> 7 дней / 6 ночей</span>
-                  <b>Цены на заказ</b>
-                </div>
-                <a href="#" class="more">Подробнее</a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="tour-item">
-              <div class="img" style="background-image: url(img/tour-slider-img7.png)"></div>
-              <div class="texts">
-                <a href="#" class="name">Вкус Сибири</a>
-                  <span class="city">С 15.05.2025 до 18.05.2025</span>
-                  <div class="price">
-                    <span class="text">20 дней /19 ночей</span>
-                    <b>от 477 765 ₽</b>
+                  <div class="mob-btns">
+                    <div class="reset">
+                      <span class="text">Сброс</span>
+                      <span class="icon">
+                        <img src="img/small-close.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="blue-btn">Показать 37 туров</div>
                   </div>
-                  <a href="#" class="more">Подробнее</a>
-              </div>
+                </div>
+                <div class="filter-info">
+                    <div class="top-line">
+                        <div class="wrap">
+                            <span>Туры</span>
+                            <div class="swich-wrap">
+                              <label class="switch">
+                                <input type="checkbox" />
+                                <span class="slider"></span>
+                              </label>
+                            </div>
+                            <span>Круизы</span>
+                        </div>
+                        <span class="found">Найдено 37 туров</span>
+                        <div class="select-wrap style-border">
+                            <select>
+                                <option value="1">По популярности</option>
+                                <option value="2">По статистике</option>
+                            </select>
+                        </div>
+                        <div class="mob-btns">
+                          <div class="filter-drop-btn">
+                            <img src="img/filter-icon.svg" alt="">
+                          </div>
+                          <div class="filter-drop-btn2">
+                            <img src="img/filter-icon2.svg" alt="">
+                          </div>
+                        </div>
+                    </div>
+                    <p class="mob-title">Найдено 37 туров</p>
+                    <div class="items">
+                    <div class="tour-item">
+                        <div class="img" style="background-image: url(img/filter-img1.png)">
+                            <div class="favorite add"></div>
+                        </div>
+                        <div class="texts">
+                          <a href="#" class="name">Магическая Сицилия</a>
+                            <span class="city">Италия, Сицилия</span>
+                            <p>Места, которые вы посетите: вулкан Этна, Катания, Монреале, Остров Сицилия, Палермо, Сиракузы, Таормина</p>
+                            <div class="price">
+                              <span class="text">7 дней / 6 ночей</span>
+                              <b>Цены на заказ</b>
+                            </div>
+                            <a href="#" class="more">Подробнее</a>
+                        </div>
+                      </div>
+                      <div class="tour-item">
+                        <div class="img" style="background-image: url(img/filter-img2.png)">
+                            <div class="favorite"></div>
+                        </div>
+                        <div class="texts">
+                          <a href="#" class="name">Кьянти и Миллемилия на Феррари за 1 день</a>
+                            <span class="city">Италия, Сицилия</span>
+                            <p>Места, которые вы посетите: вулкан Этна, Катания, Монреале, Остров Сицилия, Палермо, Сиракузы, Таормина</p>
+                            <div class="price">
+                              <span class="text">7 дней / 6 ночей</span>
+                              <b>Цены на заказ</b>
+                            </div>
+                            <a href="#" class="more">Подробнее</a>
+                        </div>
+                      </div>
+                      <div class="tour-item">
+                        <div class="img" style="background-image: url(img/filter-img3.png)">
+                            <div class="favorite"></div>
+                        </div>
+                        <div class="texts">
+                          <a href="#" class="name">Магическая Сицилия</a>
+                            <span class="city">Италия, Сицилия</span>
+                            <p>Места, которые вы посетите: вулкан Этна, Катания, Монреале, Остров Сицилия, Палермо, Сиракузы, Таормина</p>
+                            <div class="price">
+                              <span class="text">7 дней / 6 ночей</span>
+                              <b>Цены на заказ</b>
+                            </div>
+                            <a href="#" class="more">Подробнее</a>
+                        </div>
+                      </div>
+                      <div class="tour-item">
+                        <div class="img" style="background-image: url(img/filter-img4.png)">
+                            <div class="favorite"></div>
+                        </div>
+                        <div class="texts">
+                          <a href="#" class="name">Магическая Сицилия</a>
+                            <span class="city">Италия, Сицилия</span>
+                            <p>Места, которые вы посетите: вулкан Этна, Катания, Монреале, Остров Сицилия, Палермо, Сиракузы, Таормина</p>
+                            <div class="price">
+                              <span class="text">7 дней / 6 ночей</span>
+                              <b>Цены на заказ</b>
+                            </div>
+                            <a href="#" class="more">Подробнее</a>
+                        </div>
+                      </div>
+                      <div class="tour-item">
+                        <div class="img" style="background-image: url(img/filter-img5.png)">
+                            <div class="favorite"></div>
+                        </div>
+                        <div class="texts">
+                          <a href="#" class="name">Магическая Сицилия</a>
+                            <span class="city">Италия, Сицилия</span>
+                            <p>Места, которые вы посетите: вулкан Этна, Катания, Монреале, Остров Сицилия, Палермо, Сиракузы, Таормина</p>
+                            <div class="price">
+                              <span class="text">7 дней / 6 ночей</span>
+                              <b>Цены на заказ</b>
+                            </div>
+                            <a href="#" class="more">Подробнее</a>
+                        </div>
+                      </div>
+                      <div class="tour-item">
+                        <div class="img" style="background-image: url(img/filter-img6.png)">
+                            <div class="favorite"></div>
+                        </div>
+                        <div class="texts">
+                          <a href="#" class="name">Магическая Сицилия</a>
+                            <span class="city">Италия, Сицилия</span>
+                            <p>Места, которые вы посетите: вулкан Этна, Катания, Монреале, Остров Сицилия, Палермо, Сиракузы, Таормина</p>
+                            <div class="price">
+                              <span class="text">7 дней / 6 ночей</span>
+                              <b>Цены на заказ</b>
+                            </div>
+                            <a href="#" class="more">Подробнее</a>
+                        </div>
+                      </div>
+                      <div class="tour-item">
+                        <div class="img" style="background-image: url(img/filter-img7.png)">
+                            <div class="favorite"></div>
+                        </div>
+                        <div class="texts">
+                          <a href="#" class="name">Магическая Сицилия</a>
+                            <span class="city">Италия, Сицилия</span>
+                            <p>Места, которые вы посетите: вулкан Этна, Катания, Монреале, Остров Сицилия, Палермо, Сиракузы, Таормина</p>
+                            <div class="price">
+                              <span class="text">7 дней / 6 ночей</span>
+                              <b>Цены на заказ</b>
+                            </div>
+                            <a href="#" class="more">Подробнее</a>
+                        </div>
+                      </div>
+                      <div class="tour-item">
+                        <div class="img" style="background-image: url(img/filter-img8.png)">
+                            <div class="favorite"></div>
+                        </div>
+                        <div class="texts">
+                          <a href="#" class="name">Магическая Сицилия</a>
+                            <span class="city">Италия, Сицилия</span>
+                            <p>Места, которые вы посетите: вулкан Этна, Катания, Монреале, Остров Сицилия, Палермо, Сиракузы, Таормина</p>
+                            <div class="price">
+                              <span class="text">7 дней / 6 ночей</span>
+                              <b>Цены на заказ</b>
+                            </div>
+                            <a href="#" class="more">Подробнее</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pagination">
+                        <button type="button" class="disabled rotate">
+                            <img src="img/pag-arrow.svg" alt="">
+                        </button>
+                        <ul>
+                            <li class="active"><button type="button">1</button></li>
+                            <li><button type="button">2</button></li>
+                            <li><button type="button">3</button></li>
+                            <li><button type="button">4</button></li>
+                        </ul>
+                        <button type="button" >
+                            <img src="img/pag-arrow.svg" alt="">
+                        </button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <footer class="footer">

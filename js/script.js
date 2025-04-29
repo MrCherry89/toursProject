@@ -123,6 +123,16 @@ $(document).ready(function () {
       $(this).find("img").toggleClass("rotate");
     })
 
+    $(".filter-drop-btn2").on("click", function(){
+      $(".filter-wrap").addClass("open");
+      $("body, html").addClass("overflow");
+    })
+
+    $(".filter-top .close").on("click", function(){
+      $(".filter-wrap").removeClass("open");
+      $("body, html").removeClass("overflow");
+    })
+
     $(".tag-item").on("click", function(){
       $(this).toggleClass("active");
     })
@@ -216,6 +226,10 @@ $(".region-item .top").on("click", function() {
   $(this).find(".icon").toggleClass("rotate");
 });
 
+$(".favorite").on("click", function() {
+  $(this).toggleClass("add");
+});
+
 $('.popup-gallery').magnificPopup({
   delegate: 'a',
   type: 'image',
@@ -284,6 +298,42 @@ $(".questions__item .questions__item-heading").on("click", function (e) {
     currentItem.find(".questions__item-body").addClass("active").slideDown();
     $(this).find(".icon").addClass("rotate");
   }
+});
+
+$(".beer-slider").each(function (index, el) {
+  $(el).BeerSlider({
+      start: $(el).data("start")
+  })
+});
+$(function () {
+  $("#slider-range").slider({
+      range: true,
+      min: 0,
+      max: 500,
+      values: [20, 480],
+      slide: function (event, ui) {
+          $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+      }
+  });
+  $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+      " - $" + $("#slider-range").slider("values", 1));
+});
+
+$(function () {
+  $("#duration-slider").slider({
+    range: true,
+    min: 1,
+    max: 30,
+    values: [1, 30],
+    slide: function (event, ui) {
+      $("#duration-from").val(ui.values[0]);
+      $("#duration-to").val(ui.values[1]);
+    }
+  });
+
+  // Установка начальных значений
+  $("#duration-from").val($("#duration-slider").slider("values", 0));
+  $("#duration-to").val($("#duration-slider").slider("values", 1));
 });
 
 });
