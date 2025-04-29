@@ -2377,9 +2377,8 @@
     }
     .header-top-menu{
       @include flex;
-      margin-left: 15px;
       li{
-        margin: 0 15px;
+        margin-right: 30px;
         a{
           font-size: 18px;
           color: white;
