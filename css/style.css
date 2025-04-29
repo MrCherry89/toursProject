@@ -7152,9 +7152,7 @@ input.error, textarea.error {
   }
 }
 .search-result-wrap .info .filter-wrap .mob-btns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -7162,6 +7160,13 @@ input.error, textarea.error {
   -ms-flex-pack: center;
   justify-content: center;
   margin-top: 20px;
+}
+@media (max-width: 1024px) {
+  .search-result-wrap .info .filter-wrap .mob-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 .search-result-wrap .info .filter-wrap .mob-btns .reset {
   display: -webkit-box;

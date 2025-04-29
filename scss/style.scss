@@ -4769,10 +4769,13 @@
         }
       }
       .mob-btns{
-        @include flex;
+        display: none;
         @include align-center;
         @include justify-center;
         margin-top: 20px;
+        @media(max-width: 1024px){
+          @include flex;
+          }
         .reset{
           @include flex;
           @include align-center;
