@@ -2132,6 +2132,117 @@ input.error, textarea.error {
   display: -ms-flexbox;
   display: flex;
   width: 24px;
+  margin-top: 2px;
+}
+.footer .footer-bottom .drop-wrap {
+  position: relative;
+  z-index: 0;
+  margin-bottom: 15px;
+}
+@media (max-width: 1024px) {
+  .footer .footer-bottom .drop-wrap {
+    max-width: 300px;
+  }
+}
+.footer .footer-bottom .drop-wrap .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+.footer .footer-bottom .drop-wrap .top .icon {
+  margin: 0;
+  margin-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer .footer-bottom .drop-wrap .top span {
+  margin-right: 10px;
+  font-size: 16px;
+  color: white;
+  transition: 0.3s;
+}
+.footer .footer-bottom .drop-wrap .top svg {
+  transition: 0.3s;
+  fill: white;
+  margin-right: 10px;
+}
+.footer .footer-bottom .drop-wrap .top .arr {
+  margin-top: 3px;
+  fill: white;
+  transition: 0.3s;
+}
+.footer .footer-bottom .drop-wrap .top .arr.rotate {
+  transform: rotate(180deg);
+}
+.footer .footer-bottom .drop-wrap .bottom {
+  transition: 0.3s;
+  transform: scale(0);
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 100;
+  padding: 15px;
+  border-radius: 8px;
+  background: white;
+}
+.footer .footer-bottom .drop-wrap .bottom.show {
+  transform: scale(1);
+}
+.footer .footer-bottom .drop-wrap .bottom ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px;
+  min-width: 370px;
+}
+.footer .footer-bottom .drop-wrap .bottom ul li {
+  white-space: nowrap;
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: #334960;
+}
+@media (max-width: 1300px) {
+  .footer .footer-bottom .drop-wrap .bottom ul li {
+    font-size: 16px;
+  }
+}
+.footer .footer-bottom .drop-wrap .bottom .phone-info {
+  margin-bottom: 12px;
+}
+.footer .footer-bottom .drop-wrap .bottom .phone-info a {
+  font-size: 16px;
+  color: #334960;
+}
+.footer .footer-bottom .drop-wrap .bottom .phone-info b {
+  font-size: 16px;
+  display: block;
+  color: #334960;
+  margin-bottom: 3px;
+}
+.footer .footer-bottom .drop-wrap .bottom .phone-info span {
+  color: #334960;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 5px;
+}
+.footer .footer-bottom .drop-wrap .bottom.p10 {
+  padding: 15px;
+  padding-bottom: 0;
+  min-width: 220px;
+}
+@media (max-width: 1300px) {
+  .footer .footer-bottom .drop-wrap .bottom.p10 {
+    right: 0px;
+    left: inherit;
+  }
 }
 
 .events-calendar {
